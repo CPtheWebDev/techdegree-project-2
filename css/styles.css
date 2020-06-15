@@ -1,4 +1,5 @@
 /* Base Styles */
+
 * {
   box-sizing: border-box;
 }
@@ -32,7 +33,8 @@ nav a {
 nav a,
 .portfolio-heading,
 .main-footer h2, 
-.main-footer a {
+.to-top,
+.main-footer ul {
   text-transform: uppercase;
   font-size: .9em;
   font-weight: bolder;
@@ -102,9 +104,14 @@ main {
   float: left;
 }
 
-.main-footer a {
+.to-top, 
+.main-footer ul {
   float: right;
   padding-top: 1.3em;
+}
+
+.main-footer ul {
+  display: none;
 }
 
 .contact-info {
@@ -122,4 +129,124 @@ main {
     content: " ";
     display: table;
     clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+  
+  .main-heading {
+    margin-bottom: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  nav a {
+    background-color: rgb(247, 247, 247);
+  }
+
+  .banner {
+    padding-bottom: 3em;
+  }
+  
+  .banner img {
+    width: 40%;
+    float: right;
+    padding-right: 1em;
+  }
+
+  .banner p {
+    width: 60%;
+    float: left;
+    margin-top: 0;
+    padding-right: 1em;
+    padding-left: 1em;
+    text-align: left;
+  }
+
+  .project {
+    width: 50%;
+    float: left;
+    padding-bottom: 2em;
+  }
+
+  .project p {
+    min-height: 77px;
+  }
+  
+  .contact-info p {
+    padding-left: 9em;
+    padding-right: 9em;
+  }
+  
+  .main-footer {
+    padding-bottom: 2em;
+  }
+  
+  .to-top {
+    display: none;
+  }
+
+  .main-footer ul {
+    display: block;
+  }
+
+  .main-footer nav a {
+    display: inline;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  
+  .banner {
+    padding-bottom: 4em;
+  }
+
+  .banner img {
+    padding-right: 2em;
+  }
+
+  .banner p {
+    font-size: 1.5em;
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+  
+  .project {
+    width: 33%;
+    padding-bottom: 3em;
+  }
+
+  .contact-info p {
+    padding-left: 17em;
+    padding-right: 17em;
+  }
+
+  .main-nav {
+    display: inline-block;
+    padding-top: 1em;
+  }
+  
+  .main-heading {
+    float: left;
+  }
+
+  header nav {
+    float: right;
+    padding-top: 1em;
+    padding-left: 27em;
+  }
+  
+  .main-heading,
+  header nav {
+    margin-bottom: 0;
+  }
+
 }
